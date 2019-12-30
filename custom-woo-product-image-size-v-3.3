@@ -1,5 +1,5 @@
     https://docs.woocommerce.com/document/image-sizes-theme-developers/
-    <?php
+    
     //used in the product ‘grids’ in places such as the shop page.
     add_filter( 'woocommerce_get_image_size_thumbnail', function( $size ) { return array(
         'width'     => '215',   // px
@@ -17,4 +17,3 @@
         'height'    => '93',    // px
         'crop'      => 1        // false
         ); } );
-?>
