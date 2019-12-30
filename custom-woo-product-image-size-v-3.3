@@ -1,0 +1,20 @@
+    https://docs.woocommerce.com/document/image-sizes-theme-developers/
+    <?php
+    //used in the product ‘grids’ in places such as the shop page.
+    add_filter( 'woocommerce_get_image_size_thumbnail', function( $size ) { return array(
+        'width'     => '215',   // px
+        'height'    => '255',   // px
+        'crop'      => 1        // true
+        ); } );
+    // used on single product pages.
+    add_filter( 'woocommerce_get_image_size_single', function( $size ) { return array(
+        'width'     => '500',   // px
+        'crop'      => 0       // true
+        ); } );
+    // used below the main image on the single product page to switch the gallery.
+    add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) { return array(
+        'width'     => '93',    // px
+        'height'    => '93',    // px
+        'crop'      => 1        // false
+        ); } );
+?>
